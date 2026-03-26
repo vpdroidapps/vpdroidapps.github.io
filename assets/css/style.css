@@ -179,6 +179,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .ck-decline{background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
 .ck-decline:hover{border-color:var(--acc-border);color:var(--text)}
 
+/* ══ UTILITIES ══ */
+.z-1 { position: relative; z-index: 1; }
+.section-bordered {
+  background: var(--proc-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  transition: background .35s, border-color .35s;
+}
+
+/* Make SVG icons inherit sizing from parent elements, behaving like text */
+svg.lucide { width: 1em; height: 1em; vertical-align: middle; }
+
+/* Force light color on hardcoded dark gradient elements */
+.article-cover, .blog-thumb, .wt { color: rgba(255, 255, 255, 0.95); }
+
 /* ══ SHARED LAYOUT ══ */
 .wrap{max-width:1280px;margin:0 auto;padding:100px 48px;position:relative;z-index:1}
 .tag{display:inline-flex;align-items:center;gap:8px;background:var(--acc-dim);border:1px solid var(--acc-border);color:var(--acc);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 13px;border-radius:100px;margin-bottom:18px;transition:all .35s}

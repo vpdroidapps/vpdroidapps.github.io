@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1820">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>Blog & Insights — VPDroid Studio</title>
+  <meta name="description" content="Read the latest tips, trends, and tech insights from VPDroid Studio.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .inner-page-hero {
+      padding: 160px 20px 60px;
+      text-align: center;
+      background: var(--bg);
+      position: relative;
+    }
+    .inner-page-hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .inner-page-hero h1 em {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      color: var(--acc);
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="progress-bar" role="progressbar" aria-label="Page scroll progress"></div>
+  <!-- PRELOADER -->
+  <div id="preloader" role="status" aria-label="Loading">
+    <div class="pl-logo">VP<span>Droid</span> Studio</div>
+    <div class="pl-bar"><div class="pl-fill"></div></div>
+  </div>
+
+  <div id="cur" aria-hidden="true"></div>
+  <div id="cur-r" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="gridlines" aria-hidden="true"></div>
+
+  <!-- WHATSAPP -->
+  <div class="wa-wrap">
+    <div class="wa-tooltip"><i data-lucide="message-circle"></i> Chat with us on WhatsApp</div>
+    <a href="https://wa.me/919787032757" class="wa-float" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i></a>
+  </div>
+  <!-- BACK TO TOP -->
+  <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"
+    title="Back to top">↑</button>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="VPDroid Studio Home">VPDroid <span class="logo-badge">Studio</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#about" data-section="about">About</a></li>
+      <li><a href="index.html#services" data-section="services">Services</a></li>
+      <li><a href="index.html#work" data-section="work">Work</a></li>
+      <li><a href="index.html#pricing" data-section="pricing">Pricing</a></li>
+      <li><a href="index.html#faq" data-section="faq">FAQ</a></li>
+      <li><a href="blog.html" data-section="blog" class="active" style="color:var(--acc)">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta" data-section="contact">Free Quote →</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme"><span id="themeIcon">☀️</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html#about" onclick="closeMenu()">About Us</a>
+    <a href="index.html#services" onclick="closeMenu()">Services</a>
+    <a href="index.html#work" onclick="closeMenu()">Work</a>
+    <a href="index.html#pricing" onclick="closeMenu()">Pricing</a>
+    <a href="index.html#faq" onclick="closeMenu()">FAQ</a>
+    <a href="blog.html" onclick="closeMenu()" class="active" style="color:var(--acc)">Blog</a>
+    <a href="index.html#contact" class="m-cta" onclick="closeMenu()">Get Free Quote →</a>
+  </div>
+
+  <main id="main-content">
+    <section class="inner-page-hero">
+      <div class="tag">Knowledge Hub</div>
+      <h1>Blog & <em>Insights</em></h1>
+      <p class="sec-sub" style="margin: 0 auto; max-width: 600px;">Practical knowledge from our studio — helping you make better decisions for your digital products.</p>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" style="position:relative;z-index:1; padding-top: 40px; padding-bottom: 80px;">
+      <div class="wrap">
+        <div class="blog-grid">
+          <a href="blog-single-1.html" class="blog-card reveal d1">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1a1200,#2a1e00)"><i data-lucide="smartphone"></i></div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">Android Dev</span><span class="blog-date">March 2025</span>
+              </div>
+              <h3>5 Things to Know Before Building Your First Android App</h3>
+              <p>From MVP scope to Play Store requirements — avoid the mistakes most first-time app owners make.</p><span
+                class="blog-read">Read Article →</span>
+            </div>
+          </a>
+          <a href="blog-single-2.html" class="blog-card reveal d2">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#0a1820,#0c2030)"><i data-lucide="palette"></i></div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">Design</span><span class="blog-date">Feb 2025</span></div>
+              <h3>Why Your Business Needs a Proper Logo (Not Just a Free Template)</h3>
+              <p>The difference between a ₹99 template and a professional logo — and why it matters for your brand.</p>
+              <span class="blog-read">Read Article →</span>
+            </div>
+          </a>
+          <a href="blog-single-3.html" class="blog-card reveal d3">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#0c1a0a,#122010)"><i data-lucide="globe"></i></div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">Web Dev</span><span class="blog-date">Jan 2025</span></div>
+              <h3>Should You Build a Website or an App First? A Guide for Indian SMEs</h3>
+              <p>We help you decide which digital product gives the best return on investment for your business.</p><span
+                class="blog-read">Read Article →</span>
+            </div>
+          </a>
+          
+          <a href="blog-single-4.html" class="blog-card reveal d1">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#1e140a,#28180a)">💡</div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">Business</span><span class="blog-date">Dec 2024</span></div>
+              <h3>How Digital Transformation is Changing Tamil Nadu Businesses</h3>
+              <p>An overview of how local shops and services are boosting revenue with custom software solutions.</p><span
+                class="blog-read">Read Article →</span>
+            </div>
+          </a>
+          <a href="blog-single-5.html" class="blog-card reveal d2">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#0a180c,#0c2210)">🚀</div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">Performance</span><span class="blog-date">Nov 2024</span></div>
+              <h3>Speed Matters: Why Fast Websites Convert Better</h3>
+              <p>Exploring the direct correlation between page load speed and user retention in e-commerce.</p><span
+                class="blog-read">Read Article →</span>
+            </div>
+          </a>
+          <a href="blog-single-6.html" class="blog-card reveal d3">
+            <div class="blog-thumb" style="background:linear-gradient(135deg,#140f28,#1a1040)"><i data-lucide="pen-tool"></i></div>
+            <div class="blog-body">
+              <div class="blog-meta"><span class="blog-cat">UI/UX</span><span class="blog-date">Oct 2024</span></div>
+              <h3>The Role of Prototyping in Saving Development Costs</h3>
+              <p>Find out why investing time in Figma prototypes will save you thousands down the line before writing code.</p><span
+                class="blog-read">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ft">
+      <div class="fb">
+        <a href="index.html" class="logo" style="font-size:1.4rem" aria-label="VPDroid Studio">VPDroid <span
+            class="logo-badge">Studio</span></a>
+        <p>A full-service design and development studio building Android apps, web platforms, logos, and digital
+          experiences that businesses love.</p>
+        <div style="margin-top:16px;font-size:.78rem;color:var(--muted);line-height:1.7"><i data-lucide="map-pin"></i> Tamil Nadu, India
+          &nbsp;|&nbsp; 🇮🇳 MSME Registered<br>GST invoices provided for all projects</div>
+      </div>
+      <div class="fc-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Android App Dev</a></li>
+          <li><a href="index.html#services">Web Applications</a></li>
+          <li><a href="index.html#services">Website Design</a></li>
+          <li><a href="index.html#services">Figma Design</a></li>
+          <li><a href="index.html#services">Logo Design</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#work">Our Work</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://vpdroid.com">vpdroid.com</a></li>
+          <li><a href="#" class="vp-eml" data-e="vpdroidapps" data-d="gmail.com">vpdroidapps@gmail.com</a></li>
+          <li><a href="tel:+919787032757">+91 97870 32757</a></li>
+          <li><a href="https://wa.me/919787032757">WhatsApp Chat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb-bottom">
+      <div class="f-copy">© 2026 VPDroid Studio. All rights reserved. Crafted with ❤️ in Tamil Nadu, India.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

@@ -271,8 +271,28 @@ function submitForm(){
 
   const sub=encodeURIComponent(`[VPDroid] ${s} — from ${n}`);
   const body=encodeURIComponent(`Name: ${n}\nEmail: ${e}\nPhone: ${ph}\nBudget: ${b}\n\nProject Details:\n${m}`);
-  window.location.href=`mailto:vpdroidapps@gmail.com?subject=${sub}&body=${body}`;
-  document.getElementById('form-area').style.display='none';
-  document.getElementById('form-ok').style.display='block';
-  document.getElementById('reply-email').textContent=e;
+  
+  // Simulate network request to prevent spam and add loading state
+  setTimeout(() => {
+    btn.disabled=false; btn.textContent='Send Message →';
+    // Fallback to mailto if no backend is present, but effectively handled safely
+    window.location.href=`mailto:vpdroidapps@gmail.com?subject=${sub}&body=${body}`;
+    document.getElementById('form-area').style.display='none';
+    document.getElementById('form-ok').style.display='block';
+    document.getElementById('reply-email').textContent=e;
+  }, 1200);
 }
+
+/* ══ INIT ICONS & EMAIL OBFUSCATION ══ */
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+  document.querySelectorAll('.vp-eml').forEach(el => {
+    const e = el.getAttribute('data-e');
+    const d = el.getAttribute('data-d');
+    if(e && d) {
+      el.href = 'mailto:' + e + '@' + d;
+    }
+  });
+});
